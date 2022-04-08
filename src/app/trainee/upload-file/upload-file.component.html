@@ -1,0 +1,29 @@
+
+  
+<!-- Upload  -->
+<form id="file-upload-form" class="uploader">
+
+  
+    
+    <!-- <div id="response" class="hidden">
+      <div id="messages"></div>
+      <progress class="progress" id="file-progress" value="0">
+        <span>0</span>%
+      </progress>  
+    </div> -->
+  
+</form>
+<input id="file-upload" (change)="fileUpload($event)" type="file" name="fileUpload" accept=".xls,.xlsx" />
+<label for="file-upload" id="file-drag">
+</label>
+
+<!-- <button [disabled]="!buttonStatus" (click)="register()">send</button> -->
+<button (click)="register()">send</button>
+
+<table *ngIf="buttonStatus">
+  <h1>Duplicate Candidates </h1>
+    <tr *ngFor="let x of arrayForDuplicate">
+        <td>{{x}}</td>
+        
+    </tr>
+</table>
